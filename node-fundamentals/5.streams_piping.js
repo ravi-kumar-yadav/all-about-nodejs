@@ -32,19 +32,23 @@ function readFile(filePath, req, res) {
 		if (!error) {
 
 			let stream = fs.createReadStream(filePath);
-
+			
+			// invoked once, when stream is started/opened
 			stream.on('open', function () {
 				console.log('In stream.on("open")');		
 			});
 
+			// invoked every time, data is accumulated for streaming
 			stream.on('data', function (data) {
 				console.log('In stream.data() with length: %s', data.length);
 			});
 
+			// invoked once, when reading is done i.e. no more data to be read
 			stream.on('end', function () {
 				console.log('In stream.end()');
 			});
 
+			// invoked once, if error occurrs
 			stream.on('error', function (error) {
 				console.log('Error: ', error);
 			});
