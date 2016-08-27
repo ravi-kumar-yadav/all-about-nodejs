@@ -1,0 +1,3 @@
+# exclude all node_modules directories and their content
+
+**/node_modules

@@ -1,0 +1,14 @@
+{
+  "name": "qr-code",
+  "version": "1.0.0",
+  "description": "creates QR-Code from input string",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ravi",
+  "license": "ISC",
+  "dependencies": {
+    "qr-image": "^3.1.0"
+  }
+}
