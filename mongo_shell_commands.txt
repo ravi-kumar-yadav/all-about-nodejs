@@ -1,0 +1,43 @@
+start mongo repl:
+	mongo
+
+few catches:
+	mongo repl also works on V8 engine
+	mongo repl is same as node repl
+	2 + 2, 40 / 2 are all acceptable
+
+show databases:
+	show dbs
+
+switch database:
+	// creates a new db if it does not exists
+	use <db name>
+
+show tables/collections:
+	show collections
+
+create table/insert documents:
+	db.<collection-name>.insert(<document>);
+	e.g.: db.users.insert({'name':'ram', 'email':'ram@gmail.com'});
+
+select all documents:
+	db.<collection-name>.find()
+
+select with where clause:
+	
+
+update a document:
+	db.<collection-name>.update({'name':'ram'}, {$set: {'mobile':'9876543210'}}, {'upsert': true})
+			      (<identify-document>, <new/existing fields to update>, <create doc if not present>)
+
+delete a document:
+	db.<collection-name>.remove({'name':'ram'});
+				<identify document to be deleted>
+
+delete a database:
+	<go to the db (to be deleted)>
+	db.dropDatabase()
+
+exit mongo shell:
+	exit
+
