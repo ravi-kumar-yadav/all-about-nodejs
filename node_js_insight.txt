@@ -1,0 +1,25 @@
+REPL: 
+	Read Eval Print Loop
+	.save <filename>	:	saves current session in <filename> in current directory
+	.exit			:	exits current REPL session
+	.load <filename>	:	loads a node-js file in current REPL context
+
+
+req:
+	url:		/api/products?id=21&type=electronics
+	method:		GET
+	headers:	{
+				host: 'localhost:3000',
+				connection: 'keep-alive',
+				...
+			}
+
+
+
+Questions:
+---------
+
+1. Difference between 'let' and 'var'
+2. Is concurrency of Nodejs depends on no. of threads available for parallel/async io
+3. url.parse(req.url, true), true/false ?
+4. 
