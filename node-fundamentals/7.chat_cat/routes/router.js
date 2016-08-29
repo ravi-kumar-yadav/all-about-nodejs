@@ -11,5 +11,15 @@ module.exports = function (express, app) {
 		res.render('chatrooms', {title: 'In chatRooms'});		
 	});
 
+	router.get('/setColor', function (req, res, next) {
+		req.session.favColor = 'Red';
+		res.end('Setting Favourite Color !!!');
+	});
+
+	router.get('/getColor', function (req, res, next) {
+		console.log('Session: %s', JSON.stringify(req.session));
+		res.send('Favourite Color: %s', req.session.favColor || 'Not Defined');		
+	});
+
 	app.use('/', router);
 }
