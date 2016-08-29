@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
+	<!--{{title}} is replaced by Hogan while rendering with the data passed as object-->
 	<title>{{title}}</title>
-	<link rel="stylesheet" href="../public/css/home.css">
+
+	<!--removed 'public' from relative path as we have set static-file path in express in app.js-->
+	<link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
 <div class="hm-container">
 	<h1 class="hm-title">ChatCAT</h1>
-	<a href="/auth/facebook"><img src="../public/images/login_with_facebook.png"></a>
+	<a href="/auth/facebook"><img src="../images/login_with_facebook.png"></a>
 </div>
 
 </body>
