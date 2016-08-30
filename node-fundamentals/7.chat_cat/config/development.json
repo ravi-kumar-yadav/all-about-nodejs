@@ -1,0 +1,4 @@
+{
+	"dbURL": "mongodb://chatcatuser:chatcatuser@ds019816.mlab.com:19816/chatcatnodedb",
+	"sessionSecret": "random_key123456"
+}
